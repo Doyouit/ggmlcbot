@@ -23,17 +23,17 @@ bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=ga
 vipColor = 0xaaffaa
 imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/a_b892f915dbfc15ceedf8fb75e84b24ba.gif?size=256"
 
-@bot.event
+@client.event
 async def on_ready():
 	print("봇 시작")
 
-@bot.event
+@client.event
 async def on_command_error(ctx, error):
     if isinstance(error, CommandNotFound):
         return
     raise error
 
-@bot.command()
+@client.command()
 async def 급식(ctx, str2=None, str3=None):
 	if (str(ctx.author) == "서노#4375"):
 		vipColor = 0xdf93c9
@@ -267,7 +267,7 @@ async def message_error(ctx, error):
 		await ctx.send("잘못된 입력입니다.")
 
 
-@bot.command()
+@client.command()
 async def 급식공지(ctx, *, msg):
 	if(str(ctx.author) == "이준협#7777"):
 		embed=discord.Embed(title= f":warning:  __**공지사항**__", color=0xff4444)
