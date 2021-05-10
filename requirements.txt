@@ -1,3 +1,6 @@
 discord.py
 requests
 BeautifulSoup4
+re
+time
+datetime
