@@ -38,6 +38,9 @@ async def 급식(ctx, str2=None, str3=None):
 	elif (str(ctx.author) == "Console.WriteLine(\"JUGU\")#0613"):
 		vipColor = 0x03fcba
 		imgLink = "https://cdn.discordapp.com/attachments/798809167414427671/831441525018722324/mobile2.png"
+	elif (str(ctx.author) == "두름#1111"):
+		vipColor = 0xb6abf6
+		imgLink = "https://media.discordapp.net/attachments/795638550112239646/841250711467589642/88927530_p0.png"
 	else:
 		vipColor = 0xaaffaa
 		imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/a_b892f915dbfc15ceedf8fb75e84b24ba.gif?size=256"
