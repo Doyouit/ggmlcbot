@@ -12,7 +12,7 @@ import time
 import datetime
 
 #시작
-access_token = os.environ['BOT_TOKEN']
+token = os.environ['BOT_TOKEN']
 
 game = discord.Game("!급식")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=game, help_command=None)
