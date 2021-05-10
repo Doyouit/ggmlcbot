@@ -1,5 +1,4 @@
 discord.py
 requests
 BeautifulSoup4
-time
 datetime
