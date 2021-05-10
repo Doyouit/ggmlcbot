@@ -12,10 +12,7 @@ import time
 import datetime
 
 #시작
-token_path = os.path.dirname(os.path.abspath(__file__))+"/token.txt"
-t = open(token_path, "r", encoding="utf-8")
-token = t.read().split()[0]
-print("Token_key : ", token)
+access_token = os.environ['BOT_TOKEN']
 
 game = discord.Game("!급식")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=game, help_command=None)
