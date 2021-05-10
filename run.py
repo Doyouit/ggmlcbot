@@ -12,7 +12,7 @@ import time
 import datetime
 
 #시작
-token = os.environ['BOT_TOKEN']
+
 
 game = discord.Game("!급식")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=game, help_command=None)
@@ -311,5 +311,5 @@ def get_diet(code, ymd, weekday):
 	except:
 		element = " "
 	return element
-
+access_token = os.environ["BOT_TOKEN"]
 bot.run(BOT_TOKEN)
