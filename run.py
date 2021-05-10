@@ -63,7 +63,6 @@ async def 급식(ctx, str2=None, str3=None):
 		diet = get_diet(2, str(date), weekday - 1)
 		embed.add_field(name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 급식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
 		embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-	elif(str2=="봇정보"):
 	elif (str2=="내일"):
 		embed=discord.Embed(title= f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
 		date = ""
@@ -79,7 +78,6 @@ async def 급식(ctx, str2=None, str3=None):
 		diet = get_diet(2, date, weekday)
 		embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(tomorrow.day) + "일 급식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
 		embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-	elif(str2=="봇정보"):
 	elif(str2=="도움"):
 		embed=discord.Embed(title= f":fork_and_knife:   __**명령어**__", color=0xffaaaa)
 		embed.add_field(name=f"**!급식 도움**", value=f" - :speech_balloon: 지금 이 메세지를 출력합니다.", inline=False)
