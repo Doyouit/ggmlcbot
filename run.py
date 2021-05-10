@@ -315,4 +315,5 @@ def get_diet(code, ymd, weekday):
 		element = " "
 	return element
 
-bot.run(token)
+access_token = os.environ['BOT_TOKEN']
+bot.run(access_token)
