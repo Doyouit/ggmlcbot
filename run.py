@@ -92,6 +92,7 @@ async def 급식(ctx, str2=None, str3=None):
 		embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/823727241573040149/413b9a35a35ae9c49b9c299358eb81cc.png?size=256")
 		embed.add_field(name=":speech_balloon: **이름**", value="겜마고 급식 봇   ", inline=True)
 		embed.add_field(name=":speech_balloon: **설명**", value="경기게임마이스터고 급식 정보를\n제공합니다.", inline=True)
+		embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
 		embed.add_field(name="**만든이**", value="이준협", inline=False)
 		embed.set_footer(text="마지막 업데이트 날짜 : 2021-03-29")
 		await ctx.send(embed=embed)
@@ -129,6 +130,7 @@ async def 급식(ctx, str2=None, str3=None):
 			diet = "백미밥\n양송이스프\n떡갈비조림\n쫄면야채무침\n감자채볶음\n깍두기"
 		else:
 			embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + "조식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+			embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
 			embed.set_footer(text="만든 애 : 이준협",icon_url=imgLink)
 			await ctx.send(embed=embed)
 			return
@@ -161,6 +163,7 @@ async def 급식(ctx, str2=None, str3=None):
 			diet = "백미밥\n얼큰콩나물국\n생선까스&타르S\n메추리알조림\n양념깻잎지\n깍두기\n"
 		else:
 			embed.add_field(name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n", value=f"\n\n" + "석식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+			embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
 			embed.set_footer(text="만든 애 : 이준협",icon_url=imgLink)
 			await ctx.send(embed=embed)
 			return
