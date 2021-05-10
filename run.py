@@ -97,7 +97,7 @@ async def 급식(ctx, str2=None, str3=None):
 		embed.add_field(name=":speech_balloon: **설명**", value="경기게임마이스터고 급식 정보를\n제공합니다.", inline=True)
 		embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
 		embed.add_field(name="**만든이**", value="이준협", inline=False)
-		embed.set_footer(text="마지막 업데이트 날짜 : 2021-03-29")
+		embed.set_footer(text="마지막 업데이트 날짜 : 2021-05-10")
 		await ctx.send(embed=embed)
 		return
 	elif(str2=="조식" or str2=="아침"):
