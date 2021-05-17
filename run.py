@@ -46,9 +46,6 @@ async def 급식(ctx, str2=None, str3=None):
 	else:
 		vipColor = 0xaaffaa
 		imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/a_b892f915dbfc15ceedf8fb75e84b24ba.gif?size=256"
-	else:
-		vipColor = 0xaaffaa
-		imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/a_b892f915dbfc15ceedf8fb75e84b24ba.gif?size=256"
 
 	current = datetime.datetime.now()
 	tomorrow = current + datetime.timedelta(days=1)
