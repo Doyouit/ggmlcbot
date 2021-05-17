@@ -114,106 +114,125 @@ async def 급식(ctx, str2=None, str3=None):
 		embed.set_footer(text="마지막 업데이트 날짜 : 2021-05-11")
 		await ctx.send(embed=embed)
 		return
-	elif(str2=="조식" or str2=="아침"):
-		embed=discord.Embed(title= f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
+	elif (str2 == "조식" or str2 == "아침"):
+        embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
 
-		date = ""
-		if(tomorrow.month < 10):
-			date += "0"
+        date = ""
+        if (tomorrow.month < 10):
+            date += "0"
 
-		if (current.hour >= 0):
-			if (current.hour <= 1):
-				date += str(current.month)
-			else:
-				date += str(tomorrow.month)
-		date += "."
+        if (current.hour >= 0):
+            if (current.hour <= 1):
+                date += str(current.month)
+            else:
+                date += str(tomorrow.month)
+        date += "."
 
-		if(current.hour >= 0):
-			if(current.hour <= 1):
-				date += str(current.day)
-		
-		if(current.hour > 1):
-			date += str(tomorrow.day)
+        if (current.hour >= 0):
+            if (current.hour <= 1):
+                date += str(current.day)
 
-		if(date == "05.10"):
-			diet = "백미밥\n북어국\n소불고기\n연두부&양념장\n돌나물생채\n깍두기\n"
-		elif(date == "05.11"):
-			diet = "계란볶음밥\n가쓰오우동&면\n깐풍기\n잔멸치볶음\n짜먹는요구르트\n깍두기\n"
-		elif(date == "05.12"):
-			diet = "소고기죽\n수제슈크림데니쉬\n비빔만두\n씨리얼\n흰우유\n포기김치\n"
-		elif(date == "05.13"):
-			diet = "백미밥\n매콤어묵국\n크림떡볶이\n야채튀김\n피크닉-청포도맛\n깍두기\n"
-		elif(date == "05.14"):
-			diet = "백미밥\n양송이스프\n떡갈비조림\n쫄면야채무침\n감자채볶음\n깍두기"
-		else:
-			embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + "조식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
-			embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-			embed.set_footer(text="만든 애 : 이준협",icon_url=imgLink)
-			await ctx.send(embed=embed)
-			return
-		
-		if(current.hour >= 0):
-			if(current.hour <= 1):
-				embed.add_field(name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 (오늘) 조식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
-				embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-		
-		if(current.hour > 1):
-			embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
-			embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-		
+        if (current.hour > 1):
+            date += str(tomorrow.day)
 
-	elif(str2=="석식" or str2=="저녁"):
-		embed=discord.Embed(title= f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
+        if (date == "05.17"):
+            diet = "백미밥\n유부장국\n달고마닭갈비\n네모두부적\n건파래자반\n깍두기"
+        elif (date == "05.18"):
+            diet = "야채계란죽\n핫도그&케찹\n멕시칸샐러드\n씨리얼\n흰우유\n포기김치"
+        elif (date == "05.19"):
+            diet = "석가탄신일\n"
+        elif (date == "05.20"):
+            diet = "백미밥\n조랭이떡국\n김치제육볶음\n메추리알샐러드\n떠먹는요구르트\n깍두기"
+        elif (date == "05.21"):
+            diet = "흑미밥\n닭곰탕\n매콤돈육찜\n도토리묵무침\n엄마손파이\n포기김치"
+        else:
+            embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(
+                tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + "조식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
+                            inline=False)
+            embed.set_image(
+                url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
+            embed.set_footer(text="만든 애 : 이준협", icon_url=imgLink)
+            await ctx.send(embed=embed)
+            return
 
-		date = ""
-		if(current.month < 10):
-			date += "0"
-		date += str(current.month)
-		date += "."
-		date += str(current.day)
+        if (current.hour >= 0):
+            if (current.hour <= 1):
+                embed.add_field(name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(
+                    current.day) + "일 (오늘) 조식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
+                                inline=False)
+                embed.set_image(
+                    url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
 
-		if(date == "05.10"):
-			diet = "백미밥\n고추장찌개\n간장찜닭\n김말이튀김\n요플레\n포기김치\n"
-		elif(date == "05.11"):
-			diet = "백미밥\n들깨미역국\n콩나물불고기\n잡채어묵조림\n오이양파무침\n포기김치\n"
-		elif(date == "05.12"):
-			diet = "백미밥\n애호박된장찌개\n돼지갈비찜\n옥수수볼\n청포묵무침\n깍두기\n"
-		elif(date == "05.13"):
-			diet = "백미밥\n얼큰콩나물국\n생선까스&타르S\n메추리알조림\n양념깻잎지\n깍두기\n"
-		else:
-			embed.add_field(name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n", value=f"\n\n" + "석식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
-			embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-			embed.set_footer(text="만든 애 : 이준협",icon_url=imgLink)
-			await ctx.send(embed=embed)
-			return
-		
-		embed.add_field(name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
-		embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-	elif(str2=="간식"):
-		embed=discord.Embed(title= f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
+        if (current.hour > 1):
+            embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(
+                tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
+                            inline=False)
+            embed.set_image(
+                url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
 
-		date = ""
-		if(current.month < 10):
-			date += "0"
-		date += str(current.month)
-		date += "."
-		date += str(current.day)
 
-		if(date == "05.10"):
-			diet = "\n달콤허니빵&두유\n"
-		elif(date == "05.11"):
-			diet = "빅딸기샌드&사과주스\n"
-		elif(date == "05.12"):
-			diet = "촉촉한고구마케익&바나나우유\n"
-		elif(date == "05.13"):
-			diet = "왕만쥬&식혜\n"
-		else:
-			embed.add_field(name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n", value=f"\n\n" + "간식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
-			embed.set_footer(text="만든 애 : 이준협",icon_url=imgLink)
-			await ctx.send(embed=embed)
-			return
-		
-		embed.add_field(name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+    elif (str2 == "석식" or str2 == "저녁"):
+        embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
+
+        date = ""
+        if (current.month < 10):
+            date += "0"
+        date += str(current.month)
+        date += "."
+        date += str(current.day)
+
+        if (date == "05.17"):
+            diet = "백미밥\n얼큰오징어무국\n돈육장조림\n치즈스틱\n숙주나물무침\n포기김치\n"
+        elif (date == "05.18"):
+            diet = "백미밥\n소고기미역국\n돈까스&소스\n푸실리파스타\n오이피클\n포기김치\n"
+        elif (date == "05.19"):
+            diet = "석가탄신일"
+        elif (date == "05.20"):
+            diet = "백미밥\n근대된장국\n치킨찹스테이크\n방울순대튀김\n김구이\n포기김치\n"
+        else:
+            embed.add_field(
+                name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
+                value=f"\n\n" + "석식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+            embed.set_image(
+                url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
+            embed.set_footer(text="만든 애 : 이준협", icon_url=imgLink)
+            await ctx.send(embed=embed)
+            return
+
+        embed.add_field(
+            name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
+            value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+        embed.set_image(
+            url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
+    elif (str2 == "간식"):
+        embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
+
+        date = ""
+        if (current.month < 10):
+            date += "0"
+        date += str(current.month)
+        date += "."
+        date += str(current.day)
+
+        if (date == "05.17"):
+            diet = "\n아몬드머핀&초코우유\n"
+        elif (date == "05.18"):
+            diet = "카스타드슈크림빵&매실주스\n"
+        elif (date == "05.19"):
+            diet = "석가탄신일"
+        elif (date == "05.20"):
+            diet = "날치알주먹밥&알로에\n"
+        else:
+            embed.add_field(
+                name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
+                value=f"\n\n" + "간식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+            embed.set_footer(text="만든 애 : 이준협", icon_url=imgLink)
+            await ctx.send(embed=embed)
+            return
+
+        embed.add_field(
+            name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
+            value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
 	else:
 		if (str2!=None and str3==None):
 			if (str2.find("월") == -1 or str2.find("일") == -1):
