@@ -118,7 +118,7 @@ async def 급식(ctx, str2=None, str3=None):
 	elif (str2 == "조식" or str2 == "아침"):
 		embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
 		date = ""
-			if (tomorrow.month < 10):
+		if (tomorrow.month < 10):
 			    date += "0"
 
 			if (current.hour >= 0):
@@ -170,7 +170,7 @@ async def 급식(ctx, str2=None, str3=None):
 			    embed.set_image(
 				url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
 
-			
+				
 	
 		    elif (str2 == "석식" or str2 == "저녁"):
 			embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
