@@ -41,7 +41,7 @@ async def 급식(ctx, str2=None, str3=None):
 	elif (str(ctx.author) == "두 름#1111"):
 		vipColor = 0xb6abf6
 		imgLink = "https://media.discordapp.net/attachments/795638550112239646/841252480771817482/f3d9d176398c5d86.png?width=602&height=602"
-		elif (str(ctx.author) == "닉넴할거없다#9598"):
+	elif (str(ctx.author) == "닉넴할거없다#9598"):
         	return
 	else:
 		vipColor = 0xaaffaa
