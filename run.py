@@ -105,7 +105,7 @@ async def 급식(ctx, str2=None, str3=None):
 	elif(str2=="업데이트"):
 		embed=discord.Embed(title= f":information_source: 급식봇 업데이트 알림", color=0xaaaaff)
 		embed.set_author(name="겜마고 급식 봇", icon_url = "https://cdn.discordapp.com/avatars/823727241573040149/413b9a35a35ae9c49b9c299358eb81cc.png?size=256%22")
-		embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/823727241573040149/413b9a35a35ae9c49b9c299358eb81cc.png?size=256%22)
+		embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/823727241573040149/413b9a35a35ae9c49b9c299358eb81cc.png?size=256%22")
 		embed.add_field(name=":speech_balloon: 이름", value="겜마고 급식 봇   ", inline=True)
 		embed.add_field(name=":speech_balloon: 설명", value="V32업데이트 안내", inline=True)
 		embed.add_field(name=":speech_balloon: 설명", value="손환주 학생이 밴되었습니다.", inline=True)
