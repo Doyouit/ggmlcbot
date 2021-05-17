@@ -113,9 +113,8 @@ async def 급식(ctx, str2=None, str3=None):
 		embed.add_field(name="**만든이**", value="이준협", inline=False)
 		embed.set_footer(text="마지막 업데이트 날짜 : 2021-05-11")
 		await ctx.send(embed=embed)
-		return  
-
-    elif (str2 == "조식" or str2 == "아침"):
+		return
+	 elif (str2 == "조식" or str2 == "아침"):
         embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
 
         date = ""
@@ -359,3 +358,6 @@ def get_diet(code, ymd, weekday):
 	return element
 access_token = os.environ['BOT_TOKEN']
 bot.run(access_token)
+
+
+   
