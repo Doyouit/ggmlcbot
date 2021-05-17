@@ -42,7 +42,10 @@ async def 급식(ctx, str2=None, str3=None):
 		vipColor = 0xb6abf6
 		imgLink = "https://media.discordapp.net/attachments/795638550112239646/841252480771817482/f3d9d176398c5d86.png?width=602&height=602"
 	elif (str(ctx.author) == "닉넴할거없다#9598"):
-		return
+        	return
+    	else:
+		vipColor = 0xaaffaa
+		imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/a_b892f915dbfc15ceedf8fb75e84b24ba.gif?size=256"
 	else:
 		vipColor = 0xaaffaa
 		imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/a_b892f915dbfc15ceedf8fb75e84b24ba.gif?size=256"
@@ -99,22 +102,22 @@ async def 급식(ctx, str2=None, str3=None):
 		embed.add_field(name=":speech_balloon: **설명**", value="경기게임마이스터고 급식 정보를\n제공합니다.", inline=True)
 		embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
 		embed.add_field(name="**만든이**", value="이준협", inline=False)
-		embed.set_footer(text="마지막 업데이트 날짜 : 2021-05-11")
+		embed.set_footer(text="마지막 업데이트 날짜 : 2021-05-10")
 		await ctx.send(embed=embed)
 		return
 	elif(str2=="업데이트"):
-		embed=discord.Embed(title= f":information_source: **급식봇 업데이트 알림**", color=0xaaaaff)
-		embed.set_author(name="겜마고 급식 봇", icon_url = "https://cdn.discordapp.com/avatars/823727241573040149/413b9a35a35ae9c49b9c299358eb81cc.png?size=256")
-		embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/823727241573040149/413b9a35a35ae9c49b9c299358eb81cc.png?size=256")
-		embed.add_field(name=":speech_balloon: **이름**", value="겜마고 급식 봇   ", inline=True)
-		embed.add_field(name=":speech_balloon: **설명**", value="V32업데이트 안내", inline=True)
-		embed.add_field(name=":speech_balloon: **설명**", value="손환주 학생이 밴되었습니다.", inline=True)
-		embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-		embed.add_field(name="**만든이**", value="이준협", inline=False)
+		embed=discord.Embed(title= f":information_source: 급식봇 업데이트 알림", color=0xaaaaff)
+		embed.set_author(name="겜마고 급식 봇", icon_url = "https://cdn.discordapp.com/avatars/823727241573040149/413b9a35a35ae9c49b9c299358eb81cc.png?size=256%22)
+		embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/823727241573040149/413b9a35a35ae9c49b9c299358eb81cc.png?size=256%22)
+		embed.add_field(name=":speech_balloon: 이름", value="겜마고 급식 봇   ", inline=True)
+		embed.add_field(name=":speech_balloon: 설명", value="V32업데이트 안내", inline=True)
+		embed.add_field(name=":speech_balloon: 설명", value="손환주 학생이 밴되었습니다.", inline=True)
+		embed.set_image(url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228%22)
+		embed.add_field(name="만든이", value="이준협", inline=False)
 		embed.set_footer(text="마지막 업데이트 날짜 : 2021-05-11")
 		await ctx.send(embed=embed)
 		return
-	 elif(str2=="조식" or str2=="아침"):
+	elif(str2=="조식" or str2=="아침"):
 		embed=discord.Embed(title= f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
 
 		date = ""
@@ -339,8 +342,3 @@ def get_diet(code, ymd, weekday):
 	return element
 access_token = os.environ['BOT_TOKEN']
 bot.run(access_token)
-
-
-
-
-
