@@ -115,7 +115,7 @@ async def 급식(ctx, str2=None, str3=None):
 		await ctx.send(embed=embed)
 		return
 	
-		elif (str2 == "조식" or str2 == "아침"):
+	elif (str2 == "조식" or str2 == "아침"):
 			embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
 
 			date = ""
@@ -233,7 +233,7 @@ async def 급식(ctx, str2=None, str3=None):
 
 			embed.add_field(
 			    name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
-			    value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+			    value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)	
 	else:
 		if (str2!=None and str3==None):
 			if (str2.find("월") == -1 or str2.find("일") == -1):
