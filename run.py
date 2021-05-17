@@ -115,7 +115,7 @@ async def 급식(ctx, str2=None, str3=None):
 		await ctx.send(embed=embed)
 		return
 	 elif (str2 == "조식" or str2 == "아침"):
-        embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
+			embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
 
         date = ""
         if (tomorrow.month < 10):
@@ -361,3 +361,5 @@ bot.run(access_token)
 
 
    
+
+        
