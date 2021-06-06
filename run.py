@@ -136,16 +136,16 @@ async def 급식(ctx, str2=None, str3=None):
         if (current.hour > 1):
             date += str(tomorrow.day)
 
-        if (date == "05.31"):
-            diet = "백미밥\n북어국\n돈육간장불고기\n옥수수볼\n떠먹는요구르트\n깍두기"
-        elif (date == "06.1"):
-            diet = "백미밥\n열무된장국\n오징어까스&타르S\n고구마샐러드\n콩나물무침\n포기김치"
-        elif (date == "06.2"):
-            diet = "소고기죽\n수제크로와상\n모둠산적구이\n씨리얼\n흰우유\n포기김치"
-        elif (date == "06.3"):
-            diet = "백미밥\n고추장찌개\n소불고기\n가지양념구이\n김구이\n깍두기"
-        elif (date == "06.4"):
-            diet = "김치볶음밥\n어묵국\n로제미트볼조림\n야채계란찜\n망고주스\n깍두기"
+        if (date == "06.7"):
+            diet = "백미밥\n조개살미역국\n고구마닭볶음\n카레고로케\n쁘띠첼\n깍두기"
+        elif (date == "06.8"):
+            diet = "백미밥\n우거지된장국\n고추장불고기\n쌈무\n연두부&양념장\n포기김치"
+        elif (date == "06.9"):
+            diet = "게살죽\n핫도그&케찹\n메추리알샐러드\n씨리얼\n흰우유\n포기김치"
+        elif (date == "06.10"):
+            diet = "백미밥\n육개장\n비엔나브로콜리볶음\n청파래오징어커틀렛&칠리\n사과주스\n깍두기"
+        elif (date == "06.11"):
+            diet = "백미밥\n크림스프\n돈까스&소스\n쫄면야채무침\n연근조림\n깍두기"
         else:
             embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(
                 tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + "조식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
@@ -182,14 +182,14 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
-        if (date == "05.31"):
-            diet = "백미밥\n버섯찌개\n비엔나소세지볶음\n청포묵무침\n콩자반\n포기김치"
-        elif (date == "06.1"):
-            diet = "백미밥\n김치국\n제육볶음\n야채튀김\n건파래자반\n깍두기"
-        elif (date == "06.2"):
-            diet = "흑미밥\n두부된장찌개\n한식잡채\n메추리알조림\n양념깻잎지\n포기김치"
-        elif (date == "06.3"):
-            diet = "백미밥\n유부장국\n떡갈비조림\n감자채볶음\n마카로니샐러드\n깍두기"
+        if (date == "06.7"):
+            diet = "백미밥\n감자국\n매콤소불고기\n볼어묵조림\n김구이\n포기김치"
+        elif (date == "06.8"):
+            diet = "백미밥\n얼큰콩나물국\n닭고기장조림\n잔멸치볶음\n콘코우슬로\n깍두기"
+        elif (date == "06.9"):
+            diet = "백미밥\n들깨무국\n돈육마파두부\n고추채소전\n요플레\n포기김치"
+        elif (date == "06.10"):
+            diet = "밥\n근대된장국\n치킨찹스테이크\n고구마맛탕\n건파래자반\n깍두기"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
@@ -215,14 +215,14 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
-        if (date == "05.31"):
-            diet = "\n깐풍기&탑씨오렌지\n"
-        elif (date == "06.1"):
-            diet = "스위트딸기케익&비피더스\n"
-        elif (date == "06.2"):
-            diet = "트윈호떡&쿨피스복숭아\n"
-        elif (date == "06.3"):
-            diet = "초코패스츄리&두유\n"
+        if (date == "06.7"):
+            diet = "\n카스테라&바나나우유\n"
+        elif (date == "06.8"):
+            diet = "참치주먹밥&포도주스\n"
+        elif (date == "06.9"):
+            diet = "쁘띠샌드&매실주스\n"
+        elif (date == "06.10"):
+            diet = "소보로&오렌지주스\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
