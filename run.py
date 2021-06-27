@@ -12,7 +12,10 @@ import time
 import datetime
 
 # 시작
-
+token_path = os.path.dirname(os.path.abspath(__file__))+"/token.txt"
+t = open(token_path, "r", encoding="utf-8")
+token = t.read().split()[0]
+print("Token_key : ", token)
 
 game = discord.Game("!급식")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=game, help_command=None)
@@ -136,16 +139,16 @@ async def 급식(ctx, str2=None, str3=None):
         if (current.hour > 1):
             date += str(tomorrow.day)
 
-        if (date == "06.21"):
-            diet = "백미밥\n설렁탕\n돈채피망볶음\n꽃빵\n콩조림\n깍두기\n"
-        elif (date == "06.22"):
-            diet = "백미밥\n맑은콩나물국\n닭볶음탕\n김말이튀김\n감귤주스\n포기김치\n"
-        elif (date == "06.23"):
-            diet = "참치죽\n수제갈릭파이\n치즈어묵바&케찹\n씨리얼\n흰우유\n깍두기\n"
-        elif (date == "06.24"):
-            diet = "백미밥\n얼큰소고기무국\n오징어까스&소스\n날치알계란찜\n떠먹는요구르트\n포기김치\n"
-        elif (date == "06.25"):
-            diet = "카레라이스\n가쓰오장국\n스테이크폭찹\n군만두\n깍두기\n"
+        if (date == "06.28"):
+            diet = "백미밥\n순두부찌개\n김치제육볶음\n고구마튀김\n사과주스\n깍두기\n"
+        elif (date == "06.29"):
+            diet = "백미밥\n계란파국\n데리야끼닭볶음\n단호박옥수수전\n콩나물무침\n"
+        elif (date == "06.30"):
+            diet = "소고기죽\n수제초코칩쿠키\n떡갈비조림\n씨리얼\n흰우유\n깍두기\n"
+        elif (date == "07.1"):
+            diet = "백미밥\n무채들깨국\n돈육장조림\n피쉬볼강정\n애호박나물\n포기김치\n"
+        elif (date == "07.2"):
+            diet = "깍두기볶음밥\n버섯된장국\n오징어떡볶음\n야채튀김\n요구르트\n포기김치\n"
         else:
             embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(
                 tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + "조식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
@@ -182,14 +185,14 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
-        if (date == "06.21"):
-            diet = "백미밥\n부추된장국\n칠리닭볶음\n양파링튀김\n깻잎지\n깍두기\n"
-        elif (date == "06.22"):
-            diet = "백미밥\n김치국\n소세지야채볶음\n감자조림\n마늘쫑무침\n깍두기\n"
-        elif (date == "06.23"):
-            diet = "백미밥\n부대찌개\n돈육간장불고기\n두부강정\n갓절임\n깍두기\n"
-        elif (date == "06.24"):
-            diet = "백미밥\n두부된장찌개\n춘천닭갈비\n피쉬볼튀김\n김구이\n포기김치\n"
+        if (date == "06.28"):
+            diet = "백미밥\n북어국\n카레닭볶음\n새송이볶음\n우엉조림\n깍두기\n"
+        elif (date == "06.29"):
+            diet = "백미밥\n열무된장국\n고추장불고기\n양배추&쌈장\n망고맛푸딩\n포기김치\n"
+        elif (date == "06.30"):
+            diet = "백미밥\n유부장국\n돈육청경채볶음\n고로케\n오이부추무침\n깍두기\n"
+        elif (date == "07.1"):
+            diet = "백미밥\n크림스프\n돈까스&소스\n메추리알조림\n오복지무침\n포기김치\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
@@ -215,14 +218,14 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
-        if (date == "06.21"):
-            diet = "\n치즈케익&딸기우유\n"
-        elif (date == "06.22"):
-            diet = "잔멸치주먹밥&매실주스\n"
-        elif (date == "06.23"):
-            diet = "초코소보로&두유\n"
-        elif (date == "06.24"):
-            diet = "크림빵&사과주스\n"
+        if (date == "06.28"):
+            diet = "\n갈릭소보로&바나나우유\n"
+        elif (date == "06.29"):
+            diet = "닭강정&사이다\n"
+        elif (date == "06.30"):
+            diet = "빅단팥빵&식혜\n"
+        elif (date == "07.1"):
+            diet = "고구마케익&검은콩두유\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
@@ -366,5 +369,5 @@ def get_diet(code, ymd, weekday):
     return element
 
 
-access_token = os.environ['BOT_TOKEN']
-bot.run(access_token)
+#access_token = os.environ['BOT_TOKEN']
+bot.run(token)
