@@ -43,6 +43,9 @@ async def 급식(ctx, str2=None, str3=None):
     elif (str(ctx.author) == "두 름#0480"):
         vipColor = 0xb6abf6
         imgLink = "https://media.discordapp.net/attachments/795638550112239646/841252480771817482/f3d9d176398c5d86.png?width=602&height=602"
+    elif (str(ctx.author) == "젠_#7510"):
+        vipColor = 0x99ccff
+        imgLink = "https://cdn.discordapp.com/attachments/712113092061822986/897376799812640768/DyJ6m__UcAAcncx.png"
     else:
         vipColor = 0xaaffaa
         imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/a_a4696fc264b1fee8bed82bd200d9c78b.gif?size=256"
@@ -133,16 +136,16 @@ async def 급식(ctx, str2=None, str3=None):
         if (current.hour > 1):
             date += str(tomorrow.day)
 
-        if (date == "10.4"):
+        if (date == "10.11"):
             diet = "\n"
-        elif (date == "10.5"):
-            diet = "백미밥\n우거지된장국\n매콤돈육떡찜\n잡채말이튀김\n플레인요거트\n포기김치\n"
-        elif (date == "10.6"):
-            diet = "소고기야채죽\n수제갈릭파이\n소세지야채볶음\n씨리얼\n흰우유\n포기김치\n"
-        elif (date == "10.7"):
-            diet = "백미밥\n카레라이스S\n팽이미소장국\n돈까스&소스\n볼어묵볶음\n포기김치\n"
-        elif (date == "10.8"):
-            diet = "잡곡밥\n콩비지찌개\n간장불고기\n피쉬볼강정\n오이지무침\n깍두기\n"
+        elif (date == "10.12"):
+            diet = "참치죽\n모닝빵\n너비아니구이\n씨리얼\n흰우유\n깍두기\n"
+        elif (date == "10.13"):
+            diet = "잡곡밥\n부대찌개\n버섯소불고기\n연두부&양념장\n콩나물무침\n포기김치\n"
+        elif (date == "10.14"):
+            diet = "백미밥\n얼갈이된장국\n순대야채볶음\n비엔나케찹조림\n마늘쫑무침\n깍두기\n"
+        elif (date == "10.15"):
+            diet = "백미밥\n순두부찌개\n춘천닭갈비\n간장감자조림\n김구이\n포기김치\n"
         else:
             embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(
                 tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + "조식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
@@ -179,14 +182,14 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
-        if (date == "10.4"):
+        if (date == "10.11"):
             diet = "\n"
-        elif (date == "10.5"):
-            diet = "백미밥\n파송송계란국\n춘천닭갈비\n야채튀김\n우엉조림\n깍두기\n"
-        elif (date == "10.6"):
-            diet = "백미밥\n얼큰감자국\n고기산적구이\n새송이버섯볶음\n무말랭이무침\n포기김치\n"
-        elif (date == "10.7"):
-            diet = "백미밥\n호박된장국\n바베큐닭살볶음\n장떡전\n씨리얼바\n포기김치\n"
+        elif (date == "10.12"):
+            diet = "백미밥\n콩나물김치국\n돈육모듬장조림\n고구마맛탕\n사과주스\n깍두기\n"
+        elif (date == "10.13"):
+            diet = "백미밥\n콩나물김치국\n돈육모듬장조림\n고구마맛탕\n사과주스\n깍두기\n"
+        elif (date == "10.14"):
+            diet = "백미밥\n근대된장국\n칠리닭볶음\n야채춘권\n어채볶음\n포기김치\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
@@ -212,14 +215,14 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
-        if (date == "10.4"):
+        if (date == "10.11"):
             diet = "\n\n"
-        elif (date == "10.5"):
-            diet = "소보로빵&오렌지주스\n"
-        elif (date == "10.6"):
-            diet = "바나나&우유\n"
-        elif (date == "10.7"):
-            diet = "딸기마블케익&요구르트\n"
+        elif (date == "10.12"):
+            diet = "귤&떠먹는요거트\n"
+        elif (date == "10.13"):
+            diet = "후루트링&우유\n"
+        elif (date == "10.14"):
+            diet = "크림빵&두유\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
