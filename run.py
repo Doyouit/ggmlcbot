@@ -45,7 +45,7 @@ async def 급식(ctx, str2=None, str3=None):
         imgLink = "https://media.discordapp.net/attachments/795638550112239646/841252480771817482/f3d9d176398c5d86.png?width=602&height=602"
     elif (str(ctx.author) == "젠_#7510"):
         vipColor = 0x99ccff
-        imgLink = "https://cdn.discordapp.com/attachments/712113092061822986/897376799812640768/DyJ6m__UcAAcncx.png"
+        imgLink = "https://cdn.discordapp.com/attachments/712113092061822986/897650525338755142/unknown.png"
     else:
         vipColor = 0xaaffaa
         imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/a_a4696fc264b1fee8bed82bd200d9c78b.gif?size=256"
@@ -187,9 +187,9 @@ async def 급식(ctx, str2=None, str3=None):
         elif (date == "10.12"):
             diet = "백미밥\n콩나물김치국\n돈육모듬장조림\n고구마맛탕\n사과주스\n깍두기\n"
         elif (date == "10.13"):
-            diet = "백미밥\n콩나물김치국\n돈육모듬장조림\n고구마맛탕\n사과주스\n깍두기\n"
-        elif (date == "10.14"):
             diet = "백미밥\n근대된장국\n칠리닭볶음\n야채춘권\n어채볶음\n포기김치\n"
+        elif (date == "10.14"):
+            diet = "백미밥\n어묵국\n고추장불고기\n오징어볼강정\n망고맛젤리\n깍두기\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
