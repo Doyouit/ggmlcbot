@@ -237,20 +237,22 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
-        if (date == "03.2"):
-            diet = "쵸코카스테라\n빙그레단지바나나우유\n"
-        elif (date == "03.3"):
-            diet = "햄샌드위치\n오렌지쥬스\n"
-        elif (date == "03.4"):
-            diet = "감동란(훈제란) 2개\n사이다\n쵸코파이\n"
-        elif (date == "03.7"):
-            diet = "핫도그*케찹\n쵸코우유\n"
-        elif (date == "03.8"):
-            diet = "김가루주먹밥\n떠먹는요플레\n후렌치파이\n"
-        elif (date == "03.10"):
-            diet = "조각피자\n콜라\n"
-        elif (date == "03.11"):
+        if (date == "03.14"):
+            diet = ""
+        elif (date == "03.15"):
             diet = "순살양념치킨\n얼라이브망고주스\n"
+        elif (date == "03.16"):
+            diet = "후르트링\n흰우유\n메이플피칸파이\n"
+        elif (date == "03.17"):
+            diet = "아이돌3단샌드위치\n주스\n허니버터아몬드\n"
+        elif (date == "03.21"):
+            diet = "까망베르치즈후레시번\n샤인머스켓드링크\n꿀오란다바\n"
+        elif (date == "03.22"):
+            diet = "비요뜨\n바나나\n21곡쵸코롤\n"
+        elif (date == "03.23"):
+            diet = "국물떡볶이\n쿠키\n매실음료\n"
+        elif (date == "03.24"):
+            diet = "크랜베리치킨샌드위치\n딸기우유\n자유시간\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
