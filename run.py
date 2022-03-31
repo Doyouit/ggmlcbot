@@ -13,7 +13,7 @@ import datetime
 
 # 시작
 
-game = discord.Game("!급식")
+game = discord.Game("감자 팔아요")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=game, help_command=None)
 
 vipColor = 0xaaffaa
@@ -48,7 +48,7 @@ async def 급식(ctx, str2=None, str3=None):
         imgLink = "https://cdn.discordapp.com/attachments/712113092061822986/897650525338755142/unknown.png"
     else:
         vipColor = 0xaaffaa
-        imgLink = "https://cdn.discordapp.com/avatars/709953013908766842/41631d6066b3638f5c055b018a55db5d.webp?size=160"
+        imgLink = "https://cdn.discordapp.com/attachments/712113092061822986/897650525338755142/unknown.png"
 
     current = datetime.datetime.now()
     tomorrow = current + datetime.timedelta(days=1)
@@ -68,15 +68,13 @@ async def 급식(ctx, str2=None, str3=None):
         diet = get_diet(2, str(date), weekday - 1)
 
         #--------------잔류용 코드-------------
-        if (date == "2022.03.26"):
-            diet = "버터장조림비빔밥\n깐풍강정\n가쓰오국\n블루베리그린샐러드\n포기김치\n모닝빵츄러스\n"
-        elif (date == "2022.03.27"):
-            diet = "소세지하이라이스\n백미밥\n미역장국\n오곡치킨텐더*와사비마요\n크루통시저샐러드\n깍두기\n사과쿠키\n"
+        if (date == "2022.04.1"):
+            diet = "콩밥은 아니라 다행인 **현미밥**\n최희진은 비리다고 못먹을 **조갯살미역국**\n명재문으로 만든 **오리훈제무침**\n박현서가 24시간 동안 만든 **두부조림**\n한우엽의 리눅스를 멈출 **참나물 무침**\n하은쌤이 귀엽게 집어드실 **배추김치**\n김은총이 먹고 노래불러줄 **뻥과자**\n"
         #-------------------------------------
 
         embed.add_field(
             name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 급식\n",
-            value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+            value=f"\n\n" + diet + "\n본인의 이름이 있어도 놀라지마세요!", inline=False)
         embed.set_image(
             url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
     elif (str2 == "내일"):
@@ -94,15 +92,13 @@ async def 급식(ctx, str2=None, str3=None):
         diet = get_diet(2, date, weekday)
 
         #--------------잔류용 코드-------------
-        if (date == "2022.03.26"):
-            diet = "버터장조림비빔밥\n깐풍강정\n가쓰오국\n블루베리그린샐러드\n포기김치\n모닝빵츄러스\n"
-        elif (date == "2022.03.27"):
-            diet = "소세지하이라이스\n백미밥\n미역장국\n오곡치킨텐더*와사비마요\n크루통시저샐러드\n깍두기\n사과쿠키\n"
+        if (date == "2022.04.1"):
+            diet = "콩밥은 아니라 다행인 **현미밥**\n최희진은 비리다고 못먹을 **조갯살미역국**\n명재문으로 만든 **오리훈제무침**\n박현서가 24시간 동안 만든 **두부조림**\n한우엽의 리눅스를 멈출 **참나물 무침**\n하은쌤이 귀엽게 집어드실 **배추김치**\n김은총이 먹고 노래불러줄 **뻥과자**\n"
         #-------------------------------------
 
         embed.add_field(
             name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(tomorrow.day) + "일 급식\n",
-            value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+            value=f"\n\n" + diet + "\n본인의 이름이 있어도 놀라지마세요!", inline=False)
         embed.set_image(
             url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
     elif (str2 == "도움"):
@@ -135,40 +131,21 @@ async def 급식(ctx, str2=None, str3=None):
         embed = discord.Embed(title=f":fork_and_knife:   __**겜마고 급식 정보**__", color=vipColor)
 
         date = ""
-        if (tomorrow.month < 10):
+        if (current.month < 10):
             date += "0"
-
-        if (current.hour >= 0):
-            if (current.hour <= 1):
-                date += str(current.month)
-            else:
-                date += str(tomorrow.month)
+        date += str(current.month)
         date += "."
+        date += str(current.day)
 
-        if (current.hour >= 0):
-            if (current.hour <= 1):
-                date += str(current.day)
-
-        if (current.hour > 1):
-            date += str(tomorrow.day)
-
-        if (date == "03.26"):
-            diet = "백미밥\n닭곰탕\n찰떡궁합야채조림\n궁중떡볶이\n도토리묵야채무침\n포기김치\n씨리얼&우유\n망고푸딩\n"
-        elif (date == "03.28"):
-            diet = "백미밥\n부대찌개\n파닭파닭\n매콤감자조림\n달콤멸치볶음\n열무김치\n씨리얼&우유&후라이\n크로와상&잼\n"
-        elif (date == "03.29"):
-            diet = "불고기전골\n백미밥\n청파래오징어까스\n양념두부조림\n돌자반\n포기김치\n씨리얼&우유\n마들렌\n"
-        elif (date == "03.30"):
-            diet = "셀프핫도그\n깍두기볶음밥\n스마일감자*케찹\n그린샐러드*드레싱\n씨리얼&우유\n포기김치\n조각파인애플\n"
-        elif (date == "03.31"):
-            diet = "수육국밥\n백미밥\n김치전/해물파전\n감자꽈리조림\n청고추무침\n석박지\n씨리얼&우유\n몽키바나나도넛\n"
+        if (date == "04.1"):
+            diet = "이준협이 만든 **잡곡밥**\n문 형제가 끓인 **사골대파국**\n코로나 걸린 윤제는 못먹는 **숯불향돈불고기**\n유하준이 지나가다가 쳐다본 **비엔나케찹조림**\n이준이가 젓가락으로 찔러볼 **건새우마늘쫑볶음**\n4명의 준서들이 맛있게먹을 **포기김치**\n김성후가 우유까지 마실 **씨리얼**\n강산이 그려놓은 **모닝빵과 딸기잼**\n"
         else:
             embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(
                 tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + "조식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
                             inline=False)
             embed.set_image(
                 url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-            embed.set_footer(text="만든 애 : 이준협", icon_url=imgLink)
+            embed.set_footer(text="만든 애 : 박제인", icon_url=imgLink)
             await ctx.send(embed=embed)
             return
 
@@ -211,16 +188,16 @@ async def 급식(ctx, str2=None, str3=None):
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
-                value=f"\n\n" + "석식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+                value=f"\n\n" + "석식 정보가 없습니다." + "\n본인의 이름이 있어도 놀라지마세요!", inline=False)
             embed.set_image(
                 url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
-            embed.set_footer(text="만든 애 : 이준협", icon_url=imgLink)
+            embed.set_footer(text="만든 애 : 박제인", icon_url=imgLink)
             await ctx.send(embed=embed)
             return
 
         embed.add_field(
             name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
-            value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+            value=f"\n\n" + diet + "\n본인의 이름이 있어도 놀라지마세요!", inline=False)
         embed.set_image(
             url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
     elif (str2 == "간식"):
@@ -244,14 +221,14 @@ async def 급식(ctx, str2=None, str3=None):
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
-                value=f"\n\n" + "광현이가 안줘서 간식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
-            embed.set_footer(text="만든 애 : 이준협", icon_url=imgLink)
+                value=f"\n\n" + "광현이가 안줘서 간식 정보가 없습니다." + "\n본인의 이름이 있어도 놀라지마세요!", inline=False)
+            embed.set_footer(text="만든 애 : 박제인", icon_url=imgLink)
             await ctx.send(embed=embed)
             return
 
         embed.add_field(
             name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
-            value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+            value=f"\n\n" + diet + "\n본인의 이름이 있어도 놀라지마세요!", inline=False)
     else:
         if (str2 != None and str3 == None):
             if (str2.find("월") == -1 or str2.find("일") == -1):
@@ -285,15 +262,13 @@ async def 급식(ctx, str2=None, str3=None):
                 diet = get_diet(2, str(date), weekday)
 
                 #--------------잔류용 코드-------------
-                if (date == "2022.03.26"):
-                    diet = "버터장조림비빔밥\n깐풍강정\n가쓰오국\n블루베리그린샐러드\n포기김치\n모닝빵츄러스\n"
-                elif (date == "2022.03.27"):
-                    diet = "소세지하이라이스\n백미밥\n미역장국\n오곡치킨텐더*와사비마요\n크루통시저샐러드\n깍두기\n사과쿠키\n"
+                if (date == "2022.04.1"):
+                    diet = "콩밥은 아니라 다행인 **현미밥**\n최희진은 비리다고 못먹을 **조갯살미역국**\n명재문으로 만든 **오리훈제무침**\n박현서가 24시간 동안 만든 **두부조림**\n한우엽의 리눅스를 멈출 **참나물 무침**\n하은쌤이 귀엽게 집어드실 **배추김치**\n김은총이 먹고 노래불러줄 **뻥과자**\n"
                 #-------------------------------------
 
                 embed.add_field(
                     name=f"\n:spoon:" + str(datetime.datetime.now().year) + "년 " + str(inputMonth) + "월 " + str(
-                        inputDay) + "일 급식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
+                        inputDay) + "일 급식\n", value=f"\n\n" + diet + "\n본인의 이름이 있어도 놀라지마세요!",
                     inline=False)
         elif ((str2 != None and str3 != None)):
             if (str2.find("월") != -1 and str3.find("일") != -1):
@@ -322,23 +297,21 @@ async def 급식(ctx, str2=None, str3=None):
                 diet = get_diet(2, str(date), weekday)
 
                 #--------------잔류용 코드-------------
-                if (date == "2022.03.26"):
-                    diet = "버터장조림비빔밥\n깐풍강정\n가쓰오국\n블루베리그린샐러드\n포기김치\n모닝빵츄러스\n"
-                elif (date == "2022.03.27"):
-                    diet = "소세지하이라이스\n백미밥\n미역장국\n오곡치킨텐더*와사비마요\n크루통시저샐러드\n깍두기\n사과쿠키\n"
+                if (date == "2022.04.1"):
+                    diet = "콩밥은 아니라 다행인 **현미밥**\n최희진은 비리다고 못먹을 **조갯살미역국**\n명재문으로 만든 **오리훈제무침**\n박현서가 24시간 동안 만든 **두부조림**\n한우엽의 리눅스를 멈출 **참나물 무침**\n하은쌤이 귀엽게 집어드실 **배추김치**\n김은총이 먹고 노래불러줄 **뻥과자**\n"
                 #-------------------------------------
 
                 embed.add_field(
                     name=f"\n:spoon:" + str(datetime.datetime.now().year) + "년 " + str(inputMonth) + "월 " + str(
-                        inputDay) + "일 급식\n", value=f"\n\n" + diet + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
+                        inputDay) + "일 급식\n", value=f"\n\n" + diet + "\n본인의 이름이 있어도 놀라지마세요!",
                     inline=False)
             else:
-                await ctx.send("\"!급식 도움\"을 입력하여 명령어를 확인하세요.")
+                await ctx.send("\n본인의 이름이 있어도 놀라지마세요!")
                 return
         else:
-            await ctx.send("\"!급식 도움\"을 입력하여 명령어를 확인하세요.")
+            await ctx.send("\n본인의 이름이 있어도 놀라지마세요!")
             return
-    embed.set_footer(text="만든 애 : 이준협", icon_url=imgLink)
+    embed.set_footer(text="만든 애 : 박제인", icon_url=imgLink)
     await ctx.send(embed=embed)
 
 
@@ -355,7 +328,7 @@ async def 급식공지(ctx, *, msg):
     if (str(ctx.author) == "이준협#7777"):
         embed = discord.Embed(title=f":warning:  __**공지사항**__", color=0xff4444)
         embed.add_field(name=f"**급식 관련**", value=f"" + msg, inline=False)
-        embed.set_footer(text="만든 애 : 이준협",
+        embed.set_footer(text="만든 애 : 박제인",
                          icon_url="https://cdn.discordapp.com/avatars/709953013908766842/a_b892f915dbfc15ceedf8fb75e84b24ba.gif?size=256")
         await bot.get_guild(795318898656018444).get_channel(795320243772981258).send(embed=embed)
 
