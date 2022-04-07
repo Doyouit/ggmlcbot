@@ -237,14 +237,16 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
-        if (date == "03.28"):
-            diet = "애플뚱모스\n석류주스\n에너지바\n"
-        elif (date == "03.29"):
-            diet = "김말이강정\n코코팜포도\n허쉬초코칩쿠키\n"
-        elif (date == "03.30"):
-            diet = "콘후레이크\n흰우유\n쵸코파이\n"
-        elif (date == "03.31"):
-            diet = "아메리칸샌드위치\n주스\n떠먹는요구르트\n"
+        if (date == "04.7"):
+            diet = "샌드위치\n포도쥬스\n딸기에빠진아몬드\n"
+        elif (date == "04.11"):
+            diet = "사과에빠진롤케잌\n머스캣드링크\n요플레토핑\n"
+        elif (date == "04.12"):
+            diet = "순살양념치킨\n스위티자몽쥬스\n가나쵸코렛\n"
+        elif (date == "04.13"):
+            diet = "브라우니\n카프리썬\n닥터유에너지바\n"
+        elif (date == "04.14"):
+            diet = "참치스팸밥바\n바나나킥우유\n오곡21\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
