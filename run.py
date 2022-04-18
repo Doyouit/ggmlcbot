@@ -216,7 +216,7 @@ async def 급식(ctx, str2=None, str3=None):
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 석식\n",
-                value=f"\n\n" + "석식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
+                value=f"\n\n" + "석식 정보가 없습니다.." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.", inline=False)
             embed.set_image(
                 url="https://media.discordapp.net/attachments/780946215918632990/841259194450575360/5ec527db3bc4f1de.png?width=960&height=228")
             embed.set_footer(text="만든 애 : 이준협", icon_url=imgLink)
