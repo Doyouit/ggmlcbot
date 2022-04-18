@@ -353,7 +353,7 @@ async def message_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send("!급식 (오늘) 또는 !급식 내일")
     if isinstance(error, commands.BadArgument):
-        await ctx.send("잘못된 입력입니다.")
+        await ctx.send("잘못된 입력입니다!")
 
 
 @bot.command()
