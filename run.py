@@ -238,6 +238,7 @@ async def 급식(ctx, str2=None, str3=None):
         date += "."
         date += str(current.day)
 
+
         if (date == "04.18"):
             diet = "감동란(훈제란) 2개\n게토레이\n고구마말랭이\n"
         elif (date == "04.19"):
