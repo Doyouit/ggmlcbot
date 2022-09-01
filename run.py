@@ -162,7 +162,7 @@ async def 급식(ctx, str2=None, str3=None):
         elif (date == "09.1"):
             diet = "몰라요\n"
         elif (date == "09.2"):
-            diet = "몰라요\n"
+            diet = "흑미밥\n맑은콩나물국\n안동찜닭/납작당면\n꼬지없는핫바/케첩\n즉석후라이\n배추김치\n김가루주먹밥\n"
         else:
             embed.add_field(name=f"\n:spoon:" + str(tomorrow.year) + "년 " + str(tomorrow.month) + "월 " + str(
                 tomorrow.day) + "일 (내일) 조식\n", value=f"\n\n" + "조식 정보가 없습니다." + "\n\"!급식 도움\"을 입력하여 더 많은 명령어를 확인하세요.",
@@ -236,7 +236,7 @@ async def 급식(ctx, str2=None, str3=None):
         elif (date == "08.31"):
             diet = "감동란(훈제란) 2개\n사이다\n쿠키\n"
         elif (date == "09.1"):
-            diet = "몰라\n"
+            diet = "페스츄리꽈배기\n파인애플치즈함박스테이크\n한입구운고구마\n수제피클\n오렌지쥬스\n"
         else:
             embed.add_field(
                 name=f"\n:spoon:" + str(current.year) + "년 " + str(current.month) + "월 " + str(current.day) + "일 간식\n",
