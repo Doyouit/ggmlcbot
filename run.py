@@ -366,7 +366,7 @@ async def 급식공지(ctx):
                     "ps. 석현이를 갈군다면 더 빠르게 나올지도", inline=False)
         embed.set_footer(text="만든 애 : 이준협",
                          icon_url="https://cdn.discordapp.com/avatars/709953013908766842/a9b0496f06d4c2043feae116a1b7ad46.webp?size=128")
-        await bot.get_guild(728822026692984853).get_channel(728822026692984856).send(embed=embed)
+        await bot.get_guild(795318898656018444).get_channel(795319972226269185).send(embed=embed)
 
 
 def get_html(url):
